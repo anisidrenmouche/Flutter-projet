@@ -14,7 +14,7 @@ class Routing {
 
          case '/details':
         return MaterialPageRoute(
-          builder: (context) => DetailsScreen(),
+          builder: (context) => DetailsScreen( settings.arguments),
         );
 
       // route par défaut : écran d'acceuil

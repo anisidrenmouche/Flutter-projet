@@ -3,6 +3,7 @@ import 'package:first_flutter_app/services/CountryService.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
   CountryService _countryService = CountryService();
 
@@ -34,7 +35,10 @@ class HomePage extends StatelessWidget {
                   trailing: Icon(Icons.arrow_forward_ios),
                   onTap: () {
                     // la route dans le routing
-                    Navigator.of(context).pushNamed('/details');
+                    Navigator.of(context).pushNamed(
+                      '/details',
+                      arguments: data[index],
+                    );
                   }
 
                   //print(data[index].name);
