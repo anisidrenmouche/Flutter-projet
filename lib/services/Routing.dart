@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/screens/DetailsScrenn.dart';
 import 'package:first_flutter_app/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,11 @@ class Routing {
       case '/':
         return MaterialPageRoute(
           builder: (context) => HomeScreen(),
+        );
+
+         case '/details':
+        return MaterialPageRoute(
+          builder: (context) => DetailsScreen(),
         );
 
       // route par défaut : écran d'acceuil
